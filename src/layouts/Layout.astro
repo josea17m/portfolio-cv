@@ -1,6 +1,8 @@
 ---
+import Footer from "../articles/Footer.astro";
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,44 +10,152 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="px-5 max-w-[42rem] m-auto pb-5">
+    <!-- <div
+      class="flex flex-col items-center fixed bottom-2 lg:right-32 gap-5 lg:bottom-5 right-2"
+    >
+      <h6 class="invisible md:visible">Print Resume</h6>
+      <button class="rounded-full shadow-xl bg-white" onclick="window.print()"
+        ><img src="/printer.png" class="w-[50px]" alt="printerButton" /></button
+      >
+    </div>  -->
+
+    <div
+      class="flex flex-col items-end lg:items-center fixed bottom-4 right-4 lg:right-32 gap-5 lg:bottom-5 "
+    >
+      <h6 class="invisible md:visible">Download Resume</h6>
+      <a
+        href="/Alejandro Montero - Resume.pdf"
+        download
+        class="rounded-full shadow-xl"
+      >
+        <svg
+          width="60"
+          zoomAndPan="magnify"
+          viewBox="0 0 98.88 98.999996"
+          height="60"
+          preserveAspectRatio="xMidYMid meet"
+          version="1.0"
+          ><defs
+            ><clipPath id="623228b5bd"
+              ><path
+                d="M 16.601562 16.664062 L 81.800781 16.664062 L 81.800781 81.859375 L 16.601562 81.859375 Z M 16.601562 16.664062 "
+                clip-rule="nonzero"></path></clipPath
+            ><clipPath id="a5b54c1481"
+              ><path
+                d="M 49.203125 16.664062 C 31.199219 16.664062 16.601562 31.257812 16.601562 49.261719 C 16.601562 67.265625 31.199219 81.859375 49.203125 81.859375 C 67.207031 81.859375 81.800781 67.265625 81.800781 49.261719 C 81.800781 31.257812 67.207031 16.664062 49.203125 16.664062 Z M 49.203125 16.664062 "
+                clip-rule="nonzero"></path></clipPath
+            ><clipPath id="69aa816f20"
+              ><path
+                d="M 0 0.0585938 L 98.132812 0.0585938 L 98.132812 98.191406 L 0 98.191406 Z M 0 0.0585938 "
+                clip-rule="nonzero"></path></clipPath
+            ></defs
+          ><g clip-path="url(#623228b5bd)"
+            ><g clip-path="url(#a5b54c1481)"
+              ><path
+                fill="#ffffff"
+                d="M 16.601562 16.664062 L 81.800781 16.664062 L 81.800781 81.859375 L 16.601562 81.859375 Z M 16.601562 16.664062 "
+                fill-opacity="1"
+                fill-rule="nonzero"></path></g
+            ></g
+          ><path
+            fill="#0099ff"
+            d="M 38.621094 64.703125 L 59.777344 64.703125 L 59.777344 68.105469 L 38.621094 68.105469 Z M 38.621094 64.703125 "
+            fill-opacity="1"
+            fill-rule="nonzero"></path><path
+            fill="#0099ff"
+            d="M 38.621094 70.808594 L 59.777344 70.808594 L 59.777344 74.207031 L 38.621094 74.207031 Z M 38.621094 70.808594 "
+            fill-opacity="1"
+            fill-rule="nonzero"></path><g clip-path="url(#69aa816f20)"
+            ><path
+              fill="#0099ff"
+              d="M 49.199219 0.03125 C 22.035156 0.03125 0.0117188 22.054688 0.0117188 49.21875 C 0.0117188 76.382812 22.035156 98.40625 49.199219 98.40625 C 76.363281 98.40625 98.386719 76.382812 98.386719 49.21875 C 98.386719 22.054688 76.363281 0.03125 49.199219 0.03125 Z M 34.691406 30.054688 C 34.691406 29.429688 35.199219 28.921875 35.824219 28.921875 L 62.519531 28.921875 C 63.144531 28.921875 63.65625 29.429688 63.65625 30.054688 L 63.65625 43.378906 C 63.65625 44.003906 63.144531 44.511719 62.519531 44.511719 L 35.824219 44.511719 C 35.199219 44.511719 34.691406 44.003906 34.691406 43.378906 Z M 63.65625 75.425781 C 63.65625 76.050781 63.144531 76.558594 62.519531 76.558594 L 35.824219 76.558594 C 35.199219 76.558594 34.691406 76.050781 34.691406 75.425781 L 34.691406 63 C 34.691406 62.375 35.199219 61.867188 35.824219 61.867188 L 62.519531 61.867188 C 63.144531 61.867188 63.65625 62.375 63.65625 63 Z M 75.824219 61.9375 C 75.824219 64.546875 73.707031 66.660156 71.097656 66.660156 L 67.058594 66.660156 L 67.058594 63 C 67.058594 60.5 65.019531 58.464844 62.519531 58.464844 L 35.824219 58.464844 C 33.324219 58.464844 31.289062 60.5 31.289062 63 L 31.289062 66.660156 L 27.25 66.660156 C 24.640625 66.660156 22.527344 64.546875 22.527344 61.9375 L 22.527344 39.832031 C 22.527344 37.222656 24.640625 35.105469 27.25 35.105469 L 31.289062 35.105469 L 31.289062 43.378906 C 31.289062 45.878906 33.324219 47.914062 35.824219 47.914062 L 62.519531 47.914062 C 65.019531 47.914062 67.058594 45.878906 67.058594 43.378906 L 67.058594 35.105469 L 71.097656 35.105469 C 73.707031 35.105469 75.820312 37.222656 75.820312 39.832031 C 75.820312 39.832031 75.820312 61.9375 75.824219 61.9375 Z M 75.824219 61.9375 "
+              fill-opacity="1"
+              fill-rule="nonzero"></path></g
+          ></svg
+        >
+      </a>
+    </div>
+
+    <main id="printArea" class="px-2">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: monospace;
+  }
+  .header-social > li a {
+    border: 1px solid #9999992f;
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: all 100ms ease-in-out;
+    display: inline-block;
+  }
+
+  .header-social > li a:hover {
+    background-color: #5c5c5c0a;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+      0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+    transform: scale(1.05);
+  }
+
+  * {
+    outline: none;
+  }
+  h2 {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  h1,
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+  }
 </style>

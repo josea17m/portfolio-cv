@@ -1,0 +1,52 @@
+---
+import ExperienceCard from "../components/ExperienceCard.astro";
+---
+
+<article>
+  <header><h2>Job Experience</h2></header>
+  <main>
+    <ExperienceCard
+      title="Mercato and Company"
+      description="Website developed with Next.js and Tailwind CSS for a market. Original design inspired by the personal brand of this company. Possibility of adding an online shop in the near future. The products, services, hours and location of each market are displayed."
+      rol="Frontend Developer"
+      date="Feb 2024 - Now"
+      link="https://mercatoandco.vercel.app"
+    />
+    <ExperienceCard
+      title="Javis Pool Services"
+      description="Landing page with original and personalized design for a pool cleaning company. The services of said company, the schedule, a functional contact form and its Google Maps profile are displayed."
+      rol="Frontend Developer"
+      date="Mar - Apr 2024"
+      link="https://javiservices.netlify.app"
+    />
+    <ExperienceCard
+      title="SplashGuard Pool"
+      description="Landing page developed with Astro for a pool cleaning company. The services of said company, its schedule and methods of contact, together with its Google Maps profile, are presented."
+      rol="Frontend Developer"
+      date="Mar - Feb 2024"
+      link="https://splashguardpool.com"
+    />
+  </main>
+</article>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    main {
+      grid-template-columns: 1fr;
+    }
+  }
+  h2 {
+    color: #09f;
+  }
+</style>

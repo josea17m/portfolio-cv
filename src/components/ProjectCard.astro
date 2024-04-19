@@ -1,0 +1,31 @@
+---
+interface Props {
+  tile: string;
+  description: string;
+  tags: string[];
+  link: string;
+}
+
+const { tile, description, tags, link } = Astro.props;
+---
+
+<li
+  class="border-[1px] border-[#94949427] shadow rounded-md p-4 flex flex-col gap-2"
+>
+  <a href={link} class="text-xl w-max font-semibold hover:underline hover:text-[#5a408b]">{tile}</a>
+  <p class="text-sm text-gray-500 my-3">
+    {description}
+  </p>
+  <ul class="flex gap-2">
+    {tags.map((tag) => <li>{tag}</li>)}
+  </ul>
+</li>
+
+<style>
+  ul > li {
+    border-radius: 10px;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.6rem;
+    background-color: #8340ff48;
+  }
+</style>

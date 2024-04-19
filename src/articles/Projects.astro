@@ -1,0 +1,38 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<section>
+  <h2 class="text-[#8340ff] mb-4">Projects</h2>
+  <ul>
+    <ProjectCard
+      description="Application developed to control the budget of a project or your personal income and expenses."
+      tile="Control Budget"
+      tags={["Netlify", "React", "Talwind CSS"]}
+      link="https://your-budget-app-josea.netlify.app"
+    />
+    <ProjectCard
+      description="Application developed to control orders for a store or business. Can be added, deleted and edited."
+      tile="Control de pedidos"
+      tags={["Netlify", "React", "Talwind CSS"]}
+      link="https://control-de-pedidos.netlify.app"
+    />
+    <ProjectCard
+      description="Application developed to control veterinary patients. Patients can be added, deleted and edited."
+      tile="Control de pacientes"
+      tags={["Netlify", "React", "Talwind CSS"]}
+      link="https://veterinariaja-pacientes.netlify.app"
+    />
+  </ul>
+</section>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+</style>
